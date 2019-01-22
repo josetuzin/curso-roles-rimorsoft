@@ -6,11 +6,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  Producto
+                  Usuario
                 </div>
                 <div class="card-body">
-                  <p><strong>Nombre</strong> {{ $product->name }}</p>
-                  <p><strong>Description</strong> {{ $product->description }}</p>
+                  <p><strong>Nombre</strong> {{ $user->name }}</p>
+                  <p><strong>Email</strong> {{ $user->email }}</p>
                 </div>
             </div>
         </div>
