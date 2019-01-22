@@ -65,7 +65,7 @@ Route::middleware(['auth'])->group(function(){
     Route::put('users/{user}', 'UserController@update')->name('users.update')
     ->middleware('permission:users.edit');
 
-    Route::get('users/{user}', 'UserController@show')->name('products.show')
+    Route::get('users/{user}', 'UserController@show')->name('users.show')
     ->middleware('permission:users.show');
 
     Route::post('users/{user}', 'UserController@destroy')->name('users.destroy')
