@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('roles/{role}', 'RoleController@show')->name('roles.show')
     ->middleware('permission:roles.show');
 
-    Route::post('roles/{role}', 'RoleController@destroy')->name('roles.destroy')
+    Route::delete('roles/{role}', 'RoleController@destroy')->name('roles.destroy')
     ->middleware('permission:roles.destroy');
 
     Route::get('roles/{role}/edit', 'RoleController@edit')->name('roles.edit')
@@ -51,7 +51,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('products/{product}', 'ProductController@show')->name('products.show')
     ->middleware('permission:products.show');
 
-    Route::post('products/{product}', 'ProductController@destroy')->name('products.destroy')
+    Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy')
     ->middleware('permission:products.destroy');
 
     Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit')
@@ -68,7 +68,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('users/{user}', 'UserController@show')->name('users.show')
     ->middleware('permission:users.show');
 
-    Route::post('users/{user}', 'UserController@destroy')->name('users.destroy')
+    Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy')
     ->middleware('permission:users.destroy');
 
     Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit')

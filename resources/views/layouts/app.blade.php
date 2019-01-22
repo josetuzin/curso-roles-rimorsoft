@@ -85,8 +85,18 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
+            @if(session('info'))
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-success">
+                                {{ session('info') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
             @yield('content')
         </main>
     </div>
