@@ -20,7 +20,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('roles', 'RoleController@index')->name('roles.index')
     ->middleware('permission:roles.index');
 
-    Route::post('roles/create', 'RoleController@create')->name('roles.create')
+    Route::get('roles/create', 'RoleController@create')->name('roles.create')
     ->middleware('permission:roles.create');
 
     Route::put('roles/{role}', 'RoleController@update')->name('roles.update')
@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('products', 'ProductController@index')->name('products.index')
     ->middleware('permission:products.index');
 
-    Route::post('products/create', 'ProductController@create')->name('products.create')
+    Route::get('products/create', 'ProductController@create')->name('products.create')
     ->middleware('permission:products.create');
 
     Route::put('products/{product}', 'ProductController@update')->name('products.update')

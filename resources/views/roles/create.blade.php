@@ -6,12 +6,12 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  Producto
+                  Rol
                 </div>
                 <div class="card-body">
-                  {!! Form::model(['route' => ['products.store']]) !!}
+                  {!! Form::model(['route' => ['roles.store']]) !!}
                   
-                      @include('products.partials.form') 
+                      @include('roles.partials.form') 
                   
                   {!! Form::close() !!}
                 </div>
