@@ -10,7 +10,7 @@
         <li>
           <label>
             {{ Form::checkbox('roles[]', $role->id, null) }}  
-            <!-- se pueden marcar uno o varios roles -->
+            <!-- , ['class' => 'icheck']se pueden marcar uno o varios roles -->
             <!-- ultimo parametro null para que no tenca marcados por defecto -->
             {{ $role->name }}
             <em>({{ $role->description ?: 'N/A' }})</em>

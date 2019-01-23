@@ -49,8 +49,13 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user->update($request->all());
+
+        // el usuario tiene roles y lo sincroniza con los 
+        // que vienen en el $request
+        $user->roles()->sync($request->get('roles'));
+
         return redirect()->route('users.edit', $user->id)
-            ->with('info', 'Producto actualizado con éxito');
+            ->with('info', 'Usuario actualizado con éxito');
     }
 
     /**
@@ -62,6 +67,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return back()->with('info', 'Producto eliminado con éxito');
+        return back()->with('info', 'Usuario eliminado con éxito');
     }
 }
