@@ -15,8 +15,8 @@ Route::middleware(['auth'])->group(function(){
 
     //roles
     Route::post('roles/store', 'RoleController@store')->name('roles.store')
-        ->middleware('permission:roles.create');  //permission es el nombre registrado en middleare kernel
-    
+    ->middleware('permission:roles.create');  //permission es el nombre registrado en middleare kernel
+        
     Route::get('roles', 'RoleController@index')->name('roles.index')
     ->middleware('permission:roles.index');
 
